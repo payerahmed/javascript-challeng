@@ -33,5 +33,20 @@ function mathSeeqences(arr) {
 }
 
 console.log(mathSeeqences([10, 20, 30, 40]));
-console.log(mathSeeqences([2, 4, 8, 16 ]));
+console.log(mathSeeqences([2, 4, 8, 16]));
 console.log(mathSeeqences([2, 5, 67, 14, 68, 89]));
+
+function capitalizeWords(str) {
+  let words = str.split(' ').map((word) => {
+    // let fistLater = word.slice(0, 1);
+    // let rest = word.slice(1);
+    // fistLater = fistLater.toUpperCase();
+    // return `${fistLater} ${rest}`;
+    return word.charAt(0). toUpperCase() + word.slice(1);
+  });
+
+  return words.join(' ');
+}
+
+console.log(capitalizeWords('i woke up early today'));
+console.log(capitalizeWords('i went straigh to the beach'));
