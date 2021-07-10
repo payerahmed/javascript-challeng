@@ -42,7 +42,7 @@ function capitalizeWords(str) {
     // let rest = word.slice(1);
     // fistLater = fistLater.toUpperCase();
     // return `${fistLater} ${rest}`;
-    return word.charAt(0). toUpperCase() + word.slice(1);
+    return word.charAt(0).toUpperCase() + word.slice(1);
   });
 
   return words.join(' ');
@@ -50,3 +50,32 @@ function capitalizeWords(str) {
 
 console.log(capitalizeWords('i woke up early today'));
 console.log(capitalizeWords('i went straigh to the beach'));
+
+function unique(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str.lastIndexOf(str[i]) !== i) {
+      return false;
+    }
+  }
+  return true;
+
+  // let value = {};
+  // for (let letter of str) {
+  //   if (value[letter]) {
+  //     return false;
+  //   }
+  //   value[letter] = 'exists';
+  // }
+  // return true;
+
+  // let value =[]
+  // for (let letter of str){
+  //   if(value.indexOf(letter) !== -1){
+  //     return false
+  //   }
+  //   value.push(letter)
+  // }
+  // return true
+}
+console.log(unique('abcde'));
+console.log(unique('adbecde'));
