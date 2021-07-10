@@ -79,3 +79,15 @@ function unique(str) {
 }
 console.log(unique('abcde'));
 console.log(unique('adbecde'));
+
+function ArraySum(arr) {
+  let tempArr = arr.sort((a, b) => {
+    return a - b;
+  });
+  let largest = tempArr.pop();
+  let number = 0;
+  tempArr.forEach((item) => (number += item));
+  return largest === number;
+}
+console.log(ArraySum([1, 10, 3, 5, 19]));
+console.log(ArraySum([1, 9, 12, 4, 5, 6, 2, 35]));
