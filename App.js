@@ -152,3 +152,20 @@ function countLetters(str) {
   return -1;
 }
 console.log(countLetters('javascript is the greatest programming language'));
+
+function secondvalue(arr) {
+  let values = [...new Set(arr)].sort((a, b) => a - b);
+
+  if (values.length < 2) {
+    return `${values[0]}`;
+  } else if (values.length === 2) {
+    return `${values[0]} ${values[1]}`;
+  } else {
+    return `${values[1]}${values[values.length - 2]}`;
+  }
+}
+
+console.log(secondvalue([1]));
+console.log(secondvalue([4, 2]));
+console.log(secondvalue([22, 44, 11]));
+console.log(secondvalue([3, 2, -11, 88, 3, 67, 7]));
