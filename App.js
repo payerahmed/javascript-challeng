@@ -102,3 +102,21 @@ function ArraySum(arr) {
 }
 console.log(ArraySum([1, 10, 3, 5, 19]));
 console.log(ArraySum([1, 9, 12, 4, 5, 6, 2, 35]));
+
+let products = [
+  { title: 'Iphone 8', compamy: 'apple' },
+  { title: 'HTC phone', compamy: 'htc' },
+  { title: 'Iphone 7', compamy: 'apple' },
+  { title: 'Galaxy', compamy: 'samsung' },
+  { title: 'Iphone  Xs', compamy: 'apple' }
+];
+function getUnique(arr) {
+  // let tempArr = arr.map((item) => item.compamy);
+  // return [...new Set(tempArr)];
+  return [...arr.reduce((acc,curr)=>{
+    acc.add(curr.compamy)
+    return acc
+
+  },new Set())]
+} 
+console.log(getUnique(products));
